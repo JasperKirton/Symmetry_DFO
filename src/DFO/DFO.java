@@ -120,8 +120,8 @@ public class DFO extends PApplet {
 				double[] temp = new double[Global.dim];
 				for (int d = 0; d < Global.dim; d++) {
 					temp[d] = Global.fly[chosen].getPos(d) + 
-									   random(1) * (Global.fly[chosen].getPos(d) - Global.fly[i].getPos(d));// local nei
-									   //random(1) * (Global.fly[Global.bestIndex].getPos(d) - Global.fly[i].getPos(d));// FINAL
+									   //random(1) * (Global.fly[chosen].getPos(d) - Global.fly[i].getPos(d));// local nei
+									   random(1) * (Global.fly[Global.bestIndex].getPos(d) - Global.fly[i].getPos(d));// FINAL
 
 					// disturbance mechanism
 					if (random(1) < Global.dt)
@@ -177,6 +177,8 @@ public class DFO extends PApplet {
 			//Global.img = loadImage("input" + imgNo + ".bmp");
 			Global.img = loadImage("Exp/" + imgNo + ".png");
 			loadImageFile(Global.img);
+			for (int i = 0; i < Global.popSize; i++)
+				Global.fly[i] = new Fly(utils.getRandPos());
 
 		}
 
