@@ -7,7 +7,7 @@ public class DFO extends PApplet {
 
 	private static final long serialVersionUID = 1L;
 	
-	int imgNo = 1;
+	int imgNo = 3;
 	
 	Utils utils = new Utils();
 	@Override
@@ -17,7 +17,8 @@ public class DFO extends PApplet {
 		frameRate(Global.speed);
 		
 		//Global.img = loadImage("input" + imgNo + ".bmp");
-		Global.img = loadImage("Exp/" + imgNo + ".png");
+		Global.img = loadImage("Exp/" + "sym_0" + imgNo + ".jpg");
+		//Global.img = loadImage("Exp/" + imgNo + ".png");
 		loadImageFile(Global.img);
 		
 		Global.imgW = Global.img.width;

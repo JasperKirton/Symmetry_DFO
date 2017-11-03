@@ -9,7 +9,7 @@ public class Global {
 	public static int[][] ss; // ref image
 	public static PImage img;
 	
-	static double dt = 0.0001; // 0.0001
+	static double dt = 0.001; // 0.001
 	 
 	static int speed = 100; 
 	

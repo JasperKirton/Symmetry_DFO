@@ -117,7 +117,7 @@ public class Utils {
 	public double symmetry(double[] p) {
 		
 		double a = 0;
-		int rad = 70; // coverage radius
+		int rad = 400; // coverage radius
 		
 		//update line of symmetry and keep with context sensitive
 		
@@ -151,7 +151,6 @@ public class Utils {
 	    				sum1 += Global.ss[torus(x1+i)][torus(y1+j)];   					    				
 	    			}
 	    		}
-	    		System.out.println("sum1 = " + sum1);
 
 	    int sum2 = 0;
 	    // Calculate the value of sum2 here, radxrad block of pixels x2y2 (bottom)
@@ -164,6 +163,7 @@ public class Utils {
 			}
 	    
 	    a = Math.abs( sum1 - sum2 );
+	    System.out.println("sum1 = " + sum1);
 		
 		Global.funcName = "Symmetery";
 		return a;
